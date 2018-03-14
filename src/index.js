@@ -7,6 +7,19 @@ import './index.css';
 import App from './App';
 // import registerServiceWorker from './registerServiceWorker';
 
+store.subscribe(() => {
+    alert('стора изменилась')
+})
+
+
+// setTimeout(() => {
+//     store.dispatch({
+//         type: 'CHANGE_REGION',
+//         data: 'test'
+//     })
+//     console.log(store.getState())
+// }, 1000)
+
 ReactDOM.render(
 <Provider store={store}>
     <App />
