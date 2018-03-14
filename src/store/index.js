@@ -2,7 +2,7 @@ import {
     createStore
 } from 'redux'
 
-import rootReducers from './reducers'
+import rootReducers from '../reducers/index'
 
 const store = createStore(rootReducers)
 
