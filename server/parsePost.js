@@ -1,7 +1,13 @@
 const unirest = require('unirest');
 const cheerio = require('cheerio')
 
-function parsePost(url, titleClass, imgClass, textClass, viewsClass) {
+function parsePost(elements) {
+    const url = elements.url
+    const titleClass = elements.title
+    const imgClass = elements.img
+    const textClass = elements.text
+    const viewsClass = elements.views
+
     unirest.get(url).end(function (response) {
         const body = response.body
         const $ = cheerio.load(body)
